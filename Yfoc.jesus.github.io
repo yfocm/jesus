@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head> 
+
+     <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>yfoc.jesus</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">    
+
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> 
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://kit.fontawesome.com/8aa20175dd.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    
+
+    
+
+   <!-----<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">--->
+
+<script src="https://kit.fontawesome.com/4d6dcbb26a.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+* { box-sizing: border-box; }
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+nav{
+
+    padding:20px;
+
+    font-family:"Raleway", arial;
+
+    background-color:black !important;
+
+}
+
+nav a
+
+{
+
+    margin-bottom:0;
+
+    color:#fff;
+
+    font-size:20px;
+
+}
+
+body {
+
+    margin:0;
+
+    padding:0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #333 !important;  
+
+}
+
+.container img
+
+{
+
+    position:relative;
+
+    max-width:320px !important;
+
+    top:-10px;
+
+    opacity:.7;
+
+}
+
+/* Container holding the image and the text */
+
+.container {
+
+  margin:0;
+
+  position: relative;
+
+  text-align: center;
+
+  color: white;
+
+}
+
+/* Bottom left text */
+
+.bottom-left {
+
+  position: absolute;
+
+  bottom: 8px;
+
+  left: 16px;
+
+}
+
+/* Top left text */
+
+.top-left {
+
+  position: absolute;
+
+  top: 20px;
+
+  left: 16px;
+
+}
+
+/* Top left subtitle */
+
+.top-left.subtitle {
+
+    position:absolute;
+
+    top: 140px;
+
+    left:16px;
+
+}
+
+/* Top right text */
+
+.top-right {
+
+  position: absolute;
+
+  top: 10px;
+
+  right: 16px;
+
+}
+
+/* Bottom right text */
+
+.bottom-right {
+
+  position: absolute;
+
+  bottom: 25px;
+
+  right: 16px;
+
+}
+
+/* Centered text */
+
+.centered {
+
+  position: absolute;
+
+  top:30%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+}
+
+div {
+
+    /*--widthh: 200px;    
+
+    height: 200px;--*/
+
+    background: none;    
+
+    /*--margin:10px auto;--*/
+
+    color: #f2f2f2;
+
+    font-size: 1em;
+
+    text-align: center;
+
+    color:#fff;
+
+    padding-top: 10px;
+
+    border-radius: 2px;
+
+    font-family: "Raleway", arial;
+
+    overflow:hidden; }
+
+    
+
+.content { 
+
+    /*--height: 100vh;
+
+    text-align: center;
+
+    background: #f2f2f2;
+
+    padding-top: 30vh;
+
+    color: #888;
+
+    font-family: "Raleway", arial; }--*/    
+
+    
+
+.content p { font-size: 3em; }
+
+.content b { font-style: italic; }
+
+.container .centered
+
+{
+
+    background:red;
+
+}
+
+.item
+
+{
+
+    top:70px;
+
+}
+
+.posts
+
+{
+
+   margin-left:50px;
+
+   margin-top:50px;
+
+   max-width:320px; 
+
+}
+
+#more
+
+{
+
+    display:none;
+
+}  
+
+.posts button
+
+{
+
+    background-color:#0013a8;
+
+    color:#fff;
+
+    font-size:30px;
+
+    padding:5px;
+
+}  
+
+input[type="text"]
+
+{
+
+    background-color:red;
+
+}
+
+.posts text
+
+{
+
+    font-size:20px;
+
+}
+
+.gotopbtn
+
+{
+
+    
+
+}
+
+    </style>
+
+    <script>
+
+        var i=0;
+
+function more(){
+
+    if(!i){
+
+        document.getElementById("more").style.display="inline"
+
+                document.getElementById("dots").style.display="none";
+
+        document.getElementById("read").innerHTML="";
+
+        i=1;
+
+        
+
+    }
+
+    else{
+
+   document.getElementById("more").style.display="none";
+
+        document.getElementById("dots").style.display="inline";
+
+        document.getElementById("read").innerHTML="Explore";
+
+        i=0;
+
+    }
+
+    
+
+    
+
+}
+
+    </script>
+
+     
+
+    <body> 
+
+    
+
+    
+
+     <!-------------navigation bar----->
+
+        <nav>
+
+  <a class="navbar-brand" href="#">Yfoc.Jesus</a></nav>
+
+    
+
+  
+
+    <section>
+
+    <a class="gotopbtn" href="#"><i class="far fa-arrow-alt-circle-up" style="position:fixed;
+
+    width:50px;
+
+    height:50px;
+
+    background:#21ae60;
+
+    bottom:40px;
+
+    right:20px;
+
+    
+
+    text-decoration:none;
+
+    text-align:center;
+
+    line-height:50px;
+
+    color:white;
+
+    font-size:22px;"></i></a>
+
+   <div class="container">
+
+     <img src="https://i.ibb.co/68SSCcQ/IMG-20200514-102527-438.jpg" alt="header image" style="margin:0; width:100%;" />
+
+  <div class="bottom-left"></div>
+
+  <div class="top-left"><h2>Bible Verses And Quotes For Living In Christ</h2></div>
+
+  <div class="top-left subtitle"><h3>God's Capabilities Is Beyond Our Think Abilities</h3></div>
+
+  <div class="top-right"></div>
+
+  <div class="bottom-right">#revival</div>
+
+  <div class="centered"></div>
+
+</div>
+
+<!------Bible Verse Of The Day-------->
+
+        <div class="content"><h1>Bible Verse Of The Day</h1></div>
+
+    <div class="verse">
+
+      <script src="https://www.biblegateway.com/votd/votd.write.callback.js"></script>
+
+<script src="https://www.biblegateway.com/votd/get/?format=json&version=NIV&callback=BG.votdWriteCallback"></script>
+
+    <noscript>
+
+<!-- alternative for no javascript -->
+
+<iframe framespacing="0" frameborder="no" src="https://www.biblegateway.com/votd/get/?format=html&version=NIV">View Verse of the Day</iframe>
+
+</noscript>
+
+</div>
+
+<br>
+
+<!----------Download-------------->
+
+    <div class="item" data-aos="fade-up"><h2>Download Our Posts Here</h2></div>
+
+   <div class="item2" data-aos="fade-right">Click Or Long Press On The Images To Download Them</div>
+
+    <br />
+
+    <script>
+
+   
+
+            AOS.init({
+
+            duration: 1200,
+
+        })
+
+    
+
+        
+
+    </script>
+
+</div>
+
+<!------------images------------------>
+
+<div class="posts" style="margin-left:10px; margin-right:10px; margin-top:20px; margin-bottom:20px; max-width:600px; padding-top:10px;">
+
+<a href="https://i.ibb.co/TcDf79M/IMG-20200514-181804-805.jpg" download><img class="img" src="https://i.ibb.co/TcDf79M/IMG-20200514-181804-805.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/WptwXq4/IMG-20200514-181525-903.jpg" download><img class="img" src="https://i.ibb.co/WptwXq4/IMG-20200514-181525-903.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/tHGfsDw/IMG-20200514-181902-441.jpg" download><img class="img" src="https://i.ibb.co/tHGfsDw/IMG-20200514-181902-441.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/nBLX4t7/IMG-20200514-181541-460.jpg" download><img class="img" src="https://i.ibb.co/nBLX4t7/IMG-20200514-181541-460.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/5Ln9WdX/IMG-20200514-181617-343.jpg" download><img class="img" src="https://i.ibb.co/5Ln9WdX/IMG-20200514-181617-343.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<!------------show more button------>
+
+<span id="dots"></span><span id="more" style="display:none">
+
+<a href="https://i.ibb.co/tZWz6YF/IMG-20200514-181630-969.jpg" download><img class="img" src="https://i.ibb.co/tZWz6YF/IMG-20200514-181630-969.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/mGDhDrT/IMG-20200514-182438-919.jpg" download><img class="img" src="https://i.ibb.co/mGDhDrT/IMG-20200514-182438-919.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/B4dyv0N/IMG-20200514-181644-029.jpg" download><img class="img" src="https://i.ibb.co/B4dyv0N/IMG-20200514-181644-029.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/sm88j9Y/IMG-20200514-181657-891.jpg" download><img class="img" src="https://i.ibb.co/sm88j9Y/IMG-20200514-181657-891.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/7VsHJHZ/IMG-20200514-182237-174.jpg" download><img class="img" src="https://i.ibb.co/7VsHJHZ/IMG-20200514-182237-174.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/YLY540H/IMG-20200514-181714-445.jpg" download><img class="img" src="https://i.ibb.co/YLY540H/IMG-20200514-181714-445.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/7Qnxv5X/IMG-20200514-181733-566.jpg" download><img class="img" src="https://i.ibb.co/7Qnxv5X/IMG-20200514-181733-566.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/RhqWRKb/IMG-20200514-181401-782.jpg" download><img class="img" src="https://i.ibb.co/RhqWRKb/IMG-20200514-181401-782.jpg" style="margin-top:10px; width:100%; height:100%;"></a>
+
+<a href="https://i.ibb.co/fSKfpYj/IMG-20200514-181428-326.jpg" download><img class="img" src="https://i.ibb.co/fSKfpYj/IMG-20200514-181428-326.jpg" style="margin-top:10px; width:100%; height:100%;"></a></span><br><br>
+
+<!---------button----------------->
+
+<button type="button" id="read" onclick="more()" style="background-color:#333; color:#fff; font-size:20px; padding:5px; border-color:#333; border-radius:10px; border:none; box-shadow:none">Explore</button><br><br><br><br>
+
+<!---<a href="" download><img class="img" src="" style="margin-top:20px; width:100%; height:100%;"></a>--->
+
+<!---------description----------->
+
+<h2>Share The Love Of Christ By Sharing These Bible Verses And Quotes</h2>
+
+<br><br>
+
+<!------------comment form----------->
+
+<div class="item" data-aos="fade-up"><h2>Drop Your Comments Below</h2></div>
+
+<div class="item" data-aos="fade-right"><p>Share Your Thoughts On How We Can Improve Your Experience<p></div><br>
+
+ <form id="form" target="_self" onsubmit="return postToGoogle();" action="" autocomplete="off">
+
+    <label for="name">Name : </label>
+
+    <input id="nameField" name="entry.1858010770" type="text"  style="padding:5px; background-color:#333; color:#fff; font-size:15px; border-radius:4px;
+
+    font-family: none;" required/><br><br>
+
+    <label for="comments">Your Thoughts : </label><br>
+
+    <textarea id="commentField" name="entry.1294709528" type="comment" rows="5" style="padding:5px; background-color:#333; color:#fff; font-size:15px; border-radius: 4px;
+
+    font-family: none;" required></textarea><br><br>
+
+    <button id="send" type="submit" class="common_btn" style="padding:10px; background-color:#333; font-size:20px; color:#fff; border-radius:5px;">Submit</button><br><br><br>
+
+</form><br>
+
+<!-----------google code ajax------->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<h3 id="success-msg" style="text-align: center !important; margin-top:190px !important; display:none; color:#fff">Hey! Thank You For Your Comments And Suggestions, Praise God</h3>
+
+<!----------script for input-------->
+
+<script>
+
+function postToGoogle() {
+
+                var field1 = $("#nameField").val();
+
+                var field2 = $("#commentField").val();
+
+                 
+
+                if(field1 == ""){
+
+                    alert('Please Enter Your Name');
+
+                    document.getElementById("nameField").focus();
+
+                    return false;
+
+                }
+
+                if(field2 == ""){
+
+                    alert('Please Enter Your Email');
+
+                    document.getElementById("emailField").focus();
+
+                    return false;
+
+                }
+
+ $.ajax({
+
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSfpvB8ywuRg39VT5CTHd8cDZ00u2_VGVeVCVUI7NTwdmCJYRA/formResponse?",
+
+                    data: {"entry.1294709528": field1, "entry.1858010770": field2},
+
+                    type: "POST",
+
+                    dataType: "xml",
+
+                    success: function(d)
+
+                    {
+
+                    },
+
+                    error: function(x, y, z)
+
+                        {
+
+                            $('#success-msg').show();
+
+                            $('#form').hide();
+
+                            
+
+                        }
+
+                });
+
+                return false;
+
+            }
+
+            
+
+            </script>
+
+<!---------image copyright---------->
+
+<small>Image Courtesy : <a href="https://pixabay.com" style="color:#fff;">pixabay.com</a></small>
+
+<small>©2020youngfollowersofchristministries</small>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
